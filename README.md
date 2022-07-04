@@ -3,8 +3,8 @@
  This script search for patterns in fasta file format
  It creates bed and fasta files for each sequence that has that pattren
  
-## Required packases:
-1. python 3
+## Required:
+1. python3
 2. python pacakes: Bio, re
 
 ## Please Note:
