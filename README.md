@@ -1,23 +1,26 @@
-Required packases! 
+#Required packases:
 Bio, re
 
-# This script search for patterns in fasta file format
-# It creates bed and fasta files for each sequence that has that pattren
-# Please Note:
-# This script takes only the file name "fileToSearch"
-# This script search and create files that located at the same folder of the script
-# This script uses regx for special nuclotide notation (such as N) you can place all nucletodies under []
+# Description:
+ This script search for patterns in fasta file format
+ It creates bed and fasta files for each sequence that has that pattren
  
+# Please Note:
+ This script takes only the file name "fileToSearch"
+ This script search and create files that located at the same folder of the script
+ This script uses regx for special nuclotide notation (such as N) you can place all nucletodies under []
+ 
+# Example:
  For example there is a file called GFR_positive.fa
  you can run the following command in the terminal: 
- python SearchForSeq.py GFR_positive TGA[AG]TCA  ATTCC CCGGAA
+ 1. python SearchForSeq.py GFR_positive TGA[AG]TCA  ATTCC CCGGAA
 
 format:
 python SearchForSeq.py "file name" "Pattren 1" ..... "Pattren n"
-  
- this file containes list of records that their names is their position in the following format:
- 
- "chromosome number": "first nucleotide position" - "last nucleotide position"
+
+# output:  
+this file containes list of records that their names is their position in the following format:
+"chromosome number": "first nucleotide position" - "last nucleotide position"
  
 After using this script it well create 6 files
 for each pattren there is a bed file an a fasta file
