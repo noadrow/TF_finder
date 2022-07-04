@@ -2,6 +2,7 @@ from Bio import SeqIO
 from Bio import AlignIO
 import os
 import re
+import sys
 
 # This script search for patterns in fasta file format
 # It creates bed and fasta files for each sequence that has that pattren
@@ -14,7 +15,10 @@ dfs = []
 files = []
 searchlist = []
 pattrenList = []
-fileToSearch = "GFR_positive"
+#fileToSearch = "GFR_positive"
+fileToSearch = sys.argv[1]
+#pattrensToSearch = ['TGA[AG]TCA','ATTCC','CCGGAA']
+pattrensToSearch = sys.argv[2:]
 
 def searchSeq(x):
     for i in x:
@@ -23,7 +27,7 @@ def searchSeq(x):
         
         pattrenList.append(re.compile(i))
    
-searchSeq(['TGA[AG]TCA','ATTCC','CCGGAA'])
+searchSeq(pattrensToSearch)
 
 print (files)
 print (dfs)
