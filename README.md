@@ -5,7 +5,7 @@
  
 ## Required:
 1. python3
-2. python pacakes: Bio, re
+2. python pacakes: Bio(no need for this library anymore), re  
 
 ## Please Note:
  This script takes only the file name "fileToSearch"
